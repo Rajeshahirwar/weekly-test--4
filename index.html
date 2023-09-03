@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        label, select, input {
+            margin: 10px;
+            padding: 5px;
+        }
+
+        button {
+            margin-top: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hotel Search</h1>
+        <form id="hotelSearchForm">
+            <label for="destination">Destination:</label>
+            <input type="text" id="destination" name="destination" required>
+
+            <label for="checkIn">Check-in Date:</label>
+            <input type="date" id="checkIn" name="checkIn" required>
+
+            <label for="checkOut">Check-out Date:</label>
+            <input type="date" id="checkOut" name="checkOut" required>
+
+            <label for="guestRating">Guest Rating:</label>
+            <select id="guestRating" name="guestRating">
+                <option value="">Any</option>
+                <option value="5">5 stars</option>
+                <option value="4">4 stars</option>
+                <option value="3">3 stars</option>
+                <option value="2">2 stars</option>
+                <option value="1">1 star</option>
+            </select>
+
+            <label for="propertyClass">Property Class:</label>
+            <select id="propertyClass" name="propertyClass">
+                <option value="">Any</option>
+                <option value="Luxury">Luxury</option>
+                <option value="Mid-Range">Mid-Range</option>
+                <option value="Budget">Budget</option>
+            </select>
+
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <script>
+        const hotelSearchForm = document.getElementById("hotelSearchForm");
+
+        hotelSearchForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            // You can collect form data here and make an API request to fetch hotel data
+            // For a real application, you'd need to implement API calls to a hotel booking service.
+        });
+    </script>
+</body>
+</html>
